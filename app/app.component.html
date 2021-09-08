@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+<label class="control-label">Date :</label>
+<input [(ngModel)]="date" [owlDateTime]="fromdatepicker" placeholder="Date Time" class="form-control" name="fromDate">
+<owl-date-time #fromdatepicker></owl-date-time>
+<span [owlDateTimeTrigger]="fromdatepicker" class="trigger">icon
+	<i class="fa fa-calendar"></i>
+</span>
+
+<h2>{{date | json}}</h2>
